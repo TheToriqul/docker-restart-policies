@@ -34,32 +34,6 @@ graph TD
     style F fill:#90EE90,stroke:#333,stroke-width:2px
     style G fill:#98FB98,stroke:#333,stroke-width:2px
 ```
-```mermaid
-flowchart TD
-    subgraph Docker["Docker Engine"]
-        style Docker fill:#2496ED,color:white
-        
-        L[Container Lifecycle] --> P[Restart Policies]
-        
-        subgraph Policies["Policy Types"]
-            style Policies fill:#87CEEB
-            A[Always] --> AH[Auto-restart on any stop]
-            U[Unless-stopped] --> UH[Respects manual stops]
-            F[On-failure] --> FH[Restart on error exit]
-        end
-        
-        P --> Policies
-        
-        subgraph States["Container States"]
-            style States fill:#90EE90
-            R[Running]
-            S[Stopped]
-            E[Exited]
-        end
-        
-        Policies --> States
-    end
-```
 
 ## 💻 Technical Stack
 
